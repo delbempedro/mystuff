@@ -179,8 +179,6 @@ def ln(a):
     return medida(math.log(a._value), a._error/a._value)
 
 def log(a, b):
-        
-        "log de a na base b"
 
         if isinstance(a, medida) and isinstance(b, medida):#se ambos sao medidas
 
@@ -199,3 +197,7 @@ def log(a, b):
         else:
 
             raise TypeError("Should be medida, float or int")
+        
+def sqrt(a):
+
+    return medida(math.sqrt(a._value), a._error/(2.0*math.sqrt(a)))
