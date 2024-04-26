@@ -303,29 +303,29 @@ class measure:
 
        
 #out-of-class methods
-def exp(measure):
+def exp(curentmeasure):
     """
-    Calculates the exponential of a `measure` object.
+    Calculates the exponential of a `curentmeasure` object.
 
     Parameters:
-        measure (measure): The `measure` object to calculate the exponential of.
+        curentmeasure (measure): The `measure` object to calculate the exponential of.
 
     Returns:
         measure: A new `measure` object with the exponential of the value and exponential of the value multplied by de error.
     """
-    return measure(math.exp(measure._value), math.exp(measure._value)*measure._error)
+    return measure(math.exp(curentmeasure._value), math.exp(curentmeasure._value)*curentmeasure._error)
 
-def ln(measure):
+def ln(curentmeasure):
     """
-    Calculates the natural logarithm of a `measure` object.
+    Calculates the natural logarithm of a `curentmeasure` object.
 
     Parameters:
-        measure (measure): The `measure` object to calculate the natural logarithm of.
+        curentmeasure (measure): The `measure` object to calculate the natural logarithm of.
 
     Returns:
         measure: A new `measure` object with the natural logarithm of the value and the divison of the error by the value.
     """
-    return measure(math.log(measure._value), measure._error/measure._value)
+    return measure(math.log(curentmeasure._value), curentmeasure._error/curentmeasure._value)
 
 def log(logarithim, base):
         """
@@ -360,14 +360,14 @@ def log(logarithim, base):
 
             raise TypeError("Should be measure, float or int")
         
-def sqrt(measure):
+def sqrt(curentmeasure):
     """
-    Calculates the square root of a `measure` object.
+    Calculates the square root of a `curentmeasure` object.
 
     Args:
-        measure (measure): The `measure` object to calculate the square root of.
+        curentmeasure (measure): The `curentmeasure` object to calculate the square root of.
 
     Returns:
         measure: A new `measure` object with the square root of the value and the error divided by twice the square root of the value.
     """
-    return measure(math.sqrt(measure._value), measure._error/(2.0*math.sqrt(measure)))
+    return measure(math.sqrt(curentmeasure._value), curentmeasure._error/(2.0*math.sqrt(curentmeasure)))
