@@ -289,7 +289,7 @@ class measure:
         """
         if isinstance(other, measure):
 
-            exponential = ( other._value*(math.log(self._value)) ).exp()
+            exponential = math.exp( other._value*(math.log(self._value)) )
             multiplier = other._error*(math.log(self._value)) + other._value*self._error/self._value
             return measure(self._value**other._value, exponential*multiplier)
         
@@ -370,4 +370,4 @@ def sqrt(curentmeasure):
     Returns:
         measure: A new `measure` object with the square root of the value and the error divided by twice the square root of the value.
     """
-    return measure(math.sqrt(curentmeasure._value), curentmeasure._error/(2.0*math.sqrt(curentmeasure)))
+    return measure(math.sqrt(curentmeasure._value), curentmeasure._error/(2.0*math.sqrt(curentmeasure._value)))
