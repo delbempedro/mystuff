@@ -70,6 +70,40 @@ Pedro Calligaris Delbem\\
 
             \textbf{Desenhando:}
 
+            \begin{figure}[!ht]
+                \centering
+                \resizebox{1\textwidth}{!}{%
+                \begin{circuitikz}
+                \tikzstyle{every node}=[font=\LARGE]
+                
+                % Linhas horizontais (representando as margens)
+                \draw [short] (2.5,5) -- (11.25,5);
+                \draw [short] (2.5,8.75) -- (11.25,8.75);
+                
+                % Correnteza
+                \draw [->, >=Stealth] (2.5,6.25) -- (6.25,6.25) node[midway, above] {\large $\vec{v}_{\text{corr}}$};
+                
+                % Barco na água (inclinado)
+                \draw [->, >=Stealth, red, thick] (7.5,5) -- (6.5,6.25) node[midway, left] {\large $\vec{v}_{\text{barco}}$};
+                
+                % Projeções da velocidade do barco (correnteza + resultante)
+                \draw [->, >=Stealth] (2.5,7.5) -- (6.25,7.5);
+                \draw [->, >=Stealth] (7.5,7.5) -- (11.25,7.5);
+                \draw [->, >=Stealth] (7.5,6.25) -- (11.25,6.25);
+                
+                % Marcar o ângulo entre o rio (horizontal) e o vetor do barco
+                \draw pic[
+                    draw,
+                    ->,
+                    angle radius=1cm,
+                    angle eccentricity=1.3,
+                    "$\theta$"
+                ] {angle = (7.5,5)--(7.5,6.25)--(6.5,6.25)};
+                
+                \end{circuitikz}
+                }%
+                \end{figure}
+
             \textbf{Solu\c{c}\~ao:}
 
 
