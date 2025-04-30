@@ -1,9 +1,6 @@
 \babel@toc {brazilian}{}\relax 
-\contentsline {section}{\numberline {1}Movimento em Duas e Três Dimensões}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Aplica\c {c}\~oes de Vetores na F\'isica}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Exerc\'icio 1}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Exerc\'icio 2}{2}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Leis de Newton}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Exerc\'icio 1}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Exerc\'icio 2}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Exerc\'icio 3}{2}{subsection.2.3}%
+\contentsline {section}{\numberline {1}Exerc\'icio 1}{2}{section.1}%
+\contentsline {section}{\numberline {2}Exerc\'icio 2}{2}{section.2}%
+\contentsline {section}{\numberline {3}Exerc\'icio 3}{3}{section.3}%
+\contentsline {section}{\numberline {4}Exerc\'icio 4}{4}{section.4}%
+\contentsline {section}{\numberline {5}Exerc\'icio 5}{6}{section.5}%
