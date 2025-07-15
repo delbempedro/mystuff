@@ -1,0 +1,39 @@
+SEMESTER,UNIT,YEAR,ANNUAL SEMESTER,COURSE NAME,TOTAL CREDITS,LECTURE CREDITS,WORK CREDITS,GRADE
+1,760,2022,1º Semestre,Física I,80,5,75,5.1
+1,760,2022,1º Semestre,Seminários de Física I,16,1,15,7.0
+1,760,2022,1º Semestre,Direcionamento Acadêmico I,32,2,30,8.3
+1,760,2022,1º Semestre,Laboratório de Física I,3,2,1,7.7
+1,SMA,2022,1º Semestre,Cálculo I,64,4,60,5.7
+1,SMA,2022,1º Semestre,Álgebra Linear e Geometria Analítica,6,5,1,7.6
+2,750,2022,2º Semestre,Química Geral,32,2,30,6.5
+2,750,2022,2º Semestre,Química Geral Experimental,32,2,30,5.0
+2,760,2022,2º Semestre,Física II,80,5,75,5.6
+2,760,2022,2º Semestre,Seminários de Física II,16,1,15,10.0
+2,760,2022,2º Semestre,Direcionamento Acadêmico II,32,2,30,10.0
+2,760,2022,2º Semestre,Laboratório de Física II,3,2,1,7.1
+2,SMA,2022,2º Semestre,Cálculo II,64,4,60,8.1
+2,SME,2022,2º Semestre,Fundamentos da Programação de Computadores,6,4,2,10.0
+3,760,2023,1º Semestre,Física III,4,3,1,7.8
+3,760,2023,1º Semestre,Laboratório de Física III,64,4,60,7.5
+3,760,2023,1º Semestre,Introdução à Física Matemática,4,3,1,8.1
+3,760,2023,1º Semestre,Vibrações e Ondas,3,2,1,7.2
+3,760,2023,1º Semestre,Programação Orientada a Objetos,4,3,1,8.8
+3,SMA,2023,1º Semestre,Cálculo III,64,4,60,8.3
+4,760,2023,2º Semestre,Física IV,4,3,1,8.2
+4,760,2023,2º Semestre,Introdução à Física Computacional,4,3,1,8.7
+4,760,2023,2º Semestre,Mecânica Clássica,5,4,1,8.7
+4,760,2023,2º Semestre,Astronomia e Astrofísica,64,4,60,9.7
+4,SCC,2023,2º Semestre,Estruturas de Dados,5,4,1,7.9
+4,SMA,2023,2º Semestre,Cálculo IV,64,4,60,7.0
+5,760,2024,1º Semestre,Física Moderna,64,4,60,9.2
+5,760,2024,1º Semestre,Física Matemática,4,3,1,9.0
+5,760,2024,1º Semestre,Eletromagnetismo,5,4,1,9.5
+5,760,2024,1º Semestre,Introdução aos Sistemas de Computação,4,3,1,6.3
+6,760,2024,2º Semestre,Mecânica Quântica A,64,4,60,9.7
+6,760,2024,2º Semestre,Termodinâmica e Física Estatística,64,4,60,8.4
+7,760,2025,1º Anual,Trabalho de Conclusão de Curso,4,4,0,MA
+8,760,2025,1º Semestre,Introdução à Relatividade Geral,64,4,60,7.5
+8,760,2025,1º Semestre,Mecânica Quântica B,64,4,60,7.7
+8,760,2025,1º Semestre,Sistemas Operacionais,4,3,1,MA
+8,760,2025,1º Semestre,Mecânica Quântica Computacional,3,2,1,8.0
+9,760,2025,2º Semestre,Laboratório Avançado de Física I (8) (2),60,60,0,IL
