@@ -1,4 +1,5 @@
 SEMESTER,UNIT,YEAR,ANUAL SEMESTER,COURSE NAME,TOTAL CREDITS,LECTURE CREDITS,WORK CREDITS,GRADE
+N/A,760,2025,Anual,Trabalho de Conclusão de Curso,4,4,0,MA
 1,760,2022,1º Semestre,Física I,5,5,0,5.1
 1,760,2022,1º Semestre,Seminários de Física I,1,1,0,7.0
 1,760,2022,1º Semestre,Direcionamento Acadêmico I,2,2,0,8.3
@@ -25,15 +26,12 @@ SEMESTER,UNIT,YEAR,ANUAL SEMESTER,COURSE NAME,TOTAL CREDITS,LECTURE CREDITS,WORK
 4,760,2023,2º Semestre,Astronomia e Astrofísica,4,4,0,9.7
 4,SCC,2023,2º Semestre,Estruturas de Dados,5,4,1,7.9
 4,SMA,2023,2º Semestre,Cálculo IV,4,4,0,7.0
-5,760,2024,1º Semestre,Fisica Moderna,4,4,0,9.2
-5,760,2024,1º Semestre,Fisica Matemática,4,3,1,9.0
+5,760,2024,1º Semestre,Física Moderna,4,4,0,9.2
+5,760,2024,1º Semestre,Física Matemática,4,3,1,9.0
 5,760,2024,1º Semestre,Eletromagnetismo,5,4,1,9.5
 5,760,2024,1º Semestre,Introdução aos Sistemas de Computação,4,3,1,6.3
 6,760,2024,2º Semestre,Mecânica Quântica A,4,4,0,9.7
 6,760,2024,2º Semestre,Termodinâmica e Física Estatística,4,4,0,8.4
-6,760,2024,2º Semestre,Relatividade Restrita,4,3,1,7.3
-6,760,2024,2º Semestre,Eletromagnetismo Computacional,3,2,1,9.3
-N/A,760,2025,Anual,Trabalho de Conclusão de Curso,4,4,0,MA
 7,760,2025,1º Semestre,Introdução à Relatividade Geral,4,4,0,7.5
 7,760,2025,1º Semestre,Mecânica Quântica B,4,4,0,7.7
 7,760,2025,1º Semestre,Sistemas Operacionais,4,3,1,MA

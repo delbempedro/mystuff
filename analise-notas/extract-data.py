@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 #
-# Academic History PDF Parser (Version 16 - Final Logic)
+# Academic History PDF Parser (Final Correct Version)
 #
 # This script extracts course data from a Brazilian university's academic history PDF,
 # processes it, and saves the output to a CSV file inside a 'data' directory.
 #
 # Requirements: pypdf
-# Usage: python parser.py <path_to_your_pdf_file.pdf>
+# Usage: python extract-data.py <path_to_your_pdf_file.pdf>
 #
 
 import sys
@@ -68,46 +68,55 @@ def parse_academic_history(history_text):
             course_code = parts[0]
             
             try:
-                # --- NEW, SIMPLER AND CORRECT PARSING LOGIC ---
-                name_tokens = []
-                credit_numbers = []
-                found_first_number = False
+                # --- FINAL, ROBUST PARSING LOGIC ---
+                
+                # Isolate the grade/status from the end of the line
+                grade = parts[-2] if len(parts) > 1 and parts[-1] == 'A' else parts[-1]
+                
+                # Isolate the main data block (everything between code and grade)
+                end_index_for_data = -2 if len(parts) > 1 and parts[-1] == 'A' else -1
+                data_tokens = parts[1:end_index_for_data]
 
-                # Iterate through parts after the course code
-                for part in parts[1:]:
-                    # Grade/Status marks the end of data we care about for this logic
-                    if ('.' in part and part.replace('.', '', 1).isdigit()) or (len(part) == 2 and part.isalpha()):
-                        break
-                    
-                    # Find the boundary between name and numbers
-                    if part.isdigit() or (part.startswith('(') and part.endswith(')')):
+                # Find where the course name ends and numbers begin
+                name_tokens = []
+                number_tokens = []
+                found_first_number = False
+                for token in data_tokens:
+                    # Strip parentheses for checking if it's a digit
+                    cleaned_token = token.strip('()')
+                    if cleaned_token.isdigit():
                         found_first_number = True
                     
                     if found_first_number:
-                        credit_numbers.append(part)
+                        number_tokens.append(cleaned_token)
                     else:
-                        name_tokens.append(part)
-
+                        name_tokens.append(token)
+                
                 course_name = " ".join(name_tokens)
 
-                # The first number is always Lecture Credits (AU)
-                lecture_credits = int(credit_numbers[0].strip('()')) if len(credit_numbers) > 0 else 0
+                # The first number found is ALWAYS Lecture Credits (AU)
+                lecture_credits = int(number_tokens[0]) if len(number_tokens) > 0 else 0
                 work_credits = 0
 
-                # Work credit (TR) is the second number ONLY if it's a single digit
-                if len(credit_numbers) > 1 and len(credit_numbers[1].strip('()')) == 1:
-                     work_credits = int(credit_numbers[1].strip('()'))
-                
-                grade = parts[-2] if parts[-1] == 'A' else parts[-1]
+                # The second number is Work Credits (TR) ONLY IF it's a single digit.
+                # This correctly distinguishes it from multi-digit CH values.
+                if len(number_tokens) > 1 and len(number_tokens[1]) == 1:
+                     work_credits = int(number_tokens[1])
 
             except (ValueError, IndexError):
-                continue
+                # Fallback for simple lines like TCC
+                if len(parts) >= 4 and parts[-1].isalpha():
+                    course_name = " ".join(parts[1:-2])
+                    lecture_credits = int(parts[-2])
+                    work_credits = 0
+                    grade = parts[-1]
+                else:
+                    continue
             
             unit_match = re.match(r'([A-Z]+|^\d{3})', course_code)
             unit = unit_match.group(1) if unit_match else "N/A"
             
-            # Skip lines that are clearly headers or malformed
-            if lecture_credits == 0 and work_credits == 0 and grade.isalpha() and len(grade) > 2:
+            if not course_name:
                 continue
 
             course_data = {
@@ -122,7 +131,6 @@ def parse_academic_history(history_text):
             semesters_data[original_semester_string] = semester_courses
 
     return semesters_data
-
 
 def write_data_to_csv(data, output_filepath):
     headers = ["SEMESTER", "UNIT", "YEAR", "ANUAL SEMESTER", "COURSE NAME", "TOTAL CREDITS", "LECTURE CREDITS", "WORK CREDITS", "GRADE"]
@@ -144,7 +152,7 @@ def write_data_to_csv(data, output_filepath):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python parser.py <path_to_pdf_file>")
+        print("Usage: python extract-data.py <path_to_pdf_file>")
         sys.exit(1)
     pdf_filepath = sys.argv[1]
     print(f"Reading data from '{pdf_filepath}'...")
@@ -155,7 +163,7 @@ if __name__ == "__main__":
         if parsed_data:
             output_dir = "data"
             os.makedirs(output_dir, exist_ok=True)
-            base_name = pdf_filepath.split('/')[-1].rsplit('.', 1)[0]
+            base_name = os.path.basename(pdf_filepath).rsplit('.', 1)[0]
             output_filename = f"{base_name}_data.csv"
             full_output_path = os.path.join(output_dir, output_filename)
             print(f"Writing data to '{full_output_path}'...")
