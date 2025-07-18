@@ -4,6 +4,7 @@
 #
 # This script extracts course data from a Brazilian university's academic history PDF,
 # processes it, and saves the output to a CSV file inside a 'data' directory.
+# This version includes a specific exception to handle the page break during the 6th semester.
 #
 # Requirements: pypdf
 # Usage: python extract-data.py <path_to_your_pdf_file.pdf>
@@ -13,7 +14,7 @@ import sys
 import re
 import csv
 import os
-from pypdf import PdfReader
+from pypdf import PdfReader # type: ignore
 
 def extract_text_from_pdf(pdf_path):
     """Reads a PDF file and extracts the text from all its pages."""
@@ -41,13 +42,30 @@ def parse_academic_history(history_text):
         r"(?=\d{4}\s*(?:1º|2º|1°)\.?\s*(?:Semestre|Anual)|Créditos obtidos|_____________________________________________________________________________)"
     )
 
-    for semester_match in semester_regex.finditer(history_text):
+    all_matches = list(semester_regex.finditer(history_text))
+
+    for i, semester_match in enumerate(all_matches):
         original_semester_string = semester_match.group(1).strip()
         semester_block = semester_match.group(2)
         
         is_anual = "Anual" in original_semester_string
         if not is_anual:
             semester_count += 1
+
+        # --- EXCEÇÃO EXPLÍCITA PARA O 6º SEMESTRE ---
+        # Se o semestre atual é o 6º, procuramos por um bloco de texto adicional antes do próximo semestre.
+        if semester_count == 6:
+            # Ponto de partida: o final do bloco atual do 6º semestre
+            start_search_pos = semester_match.end()
+            # Ponto final: o início do próximo bloco de semestre (o 7º)
+            end_search_pos = all_matches[i+1].start() if i + 1 < len(all_matches) else -1
+
+            if end_search_pos != -1:
+                # O texto que falta está entre o final do bloco 6 e o início do bloco 7
+                missing_text_block = history_text[start_search_pos:end_search_pos]
+                # Anexamos o texto encontrado ao bloco do semestre atual
+                semester_block += missing_text_block
+        # --- FIM DA EXCEÇÃO ---
 
         year, anual_semester = "N/A", "N/A"
         year_semester_match = re.match(r"(\d{4})\s*(.*)", original_semester_string)
@@ -68,8 +86,6 @@ def parse_academic_history(history_text):
             course_code = parts[0]
             
             try:
-                # --- FINAL, ROBUST PARSING LOGIC ---
-                
                 # Isolate the grade/status from the end of the line
                 grade = parts[-2] if len(parts) > 1 and parts[-1] == 'A' else parts[-1]
                 
@@ -82,7 +98,6 @@ def parse_academic_history(history_text):
                 number_tokens = []
                 found_first_number = False
                 for token in data_tokens:
-                    # Strip parentheses for checking if it's a digit
                     cleaned_token = token.strip('()')
                     if cleaned_token.isdigit():
                         found_first_number = True
@@ -99,7 +114,6 @@ def parse_academic_history(history_text):
                 work_credits = 0
 
                 # The second number is Work Credits (TR) ONLY IF it's a single digit.
-                # This correctly distinguishes it from multi-digit CH values.
                 if len(number_tokens) > 1 and len(number_tokens[1]) == 1:
                      work_credits = int(number_tokens[1])
 
@@ -130,17 +144,20 @@ def parse_academic_history(history_text):
         if semester_courses:
             semesters_data[original_semester_string] = semester_courses
 
-    return semesters_data
+    # Flatten the dictionary into a simple list of courses for writing
+    all_courses = [course for courses_list in semesters_data.values() for course in courses_list]
+    return all_courses
 
-def write_data_to_csv(data, output_filepath):
+def write_data_to_csv(courses_list, output_filepath):
     headers = ["SEMESTER", "UNIT", "YEAR", "ANUAL SEMESTER", "COURSE NAME", "TOTAL CREDITS", "LECTURE CREDITS", "WORK CREDITS", "GRADE"]
     try:
+        # Sort the final list before writing to CSV
+        sorted_courses = sorted(courses_list, key=lambda x: (x['year'], x['anual_semester'] != 'Anual', isinstance(x['semester'], int), x['semester']))
+        
         with open(output_filepath, 'w', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(headers)
-            all_courses = sorted([course for courses_list in data.values() for course in courses_list], 
-                                 key=lambda x: (isinstance(x['semester'], int), x['semester']))
-            for course in all_courses:
+            for course in sorted_courses:
                 writer.writerow([
                     course["semester"], course["unit"], course["year"], course["anual_semester"],
                     course["course_name"], course["total_credits"], course["lecture_credits"],
@@ -161,11 +178,14 @@ if __name__ == "__main__":
         print("Parsing academic data...")
         parsed_data = parse_academic_history(raw_text)
         if parsed_data:
-            output_dir = "data"
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            output_dir = os.path.join(script_dir, "data")
             os.makedirs(output_dir, exist_ok=True)
+            
             base_name = os.path.basename(pdf_filepath).rsplit('.', 1)[0]
             output_filename = f"{base_name}_data.csv"
             full_output_path = os.path.join(output_dir, output_filename)
+            
             print(f"Writing data to '{full_output_path}'...")
             write_data_to_csv(parsed_data, full_output_path)
         else:

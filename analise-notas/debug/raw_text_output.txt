@@ -1,0 +1,181 @@
+Dados pessoais
+Data de nascimento: 13/05/2004
+Naturalidade: São Paulo
+Cédula de identidade: RG MEC 47865126808   São Paulo
+Nacionalidade: Brasileira
+_________________________________________________________________________________________
+Forma de ingresso : Processo seletivo - Vestibular
+Data de ingresso : Mar/2022
+Classificação na carreira:2
+Endereço da Unidade:
+Av. Trabalhador Sãocarlense 400 Área 1
+CEP: 13566-590     São Carlos-SP
+ 
+Júpiter - Sistema de Gestão Acadêmica da Pró-Reitoria de Graduação
+HISTÓRICO ESCOLAR COMPLETO
+ Unidade: Instituto de Física de São Carlos
+ Aluno: 5255417/1 - Pedro Calligaris Delbem
+ Ingresso: Vestibular SISU LE 1 - 25/03/2022
+ Curso: 76041/0 - Bacharelado em Física Computacional
+ Quantidade de reingressos: 0
+___________________________________________________________________________________________
+ Emitido em 12/07/2025 19:25 - Página 1 de 
+4
+Creditos Atividade 
+Sigla Nome da Disciplina AU TR CH CE CP EXT ATPA FREQ NOTA
+_________________________________________________________________________________________
+2022  1º. Semestre
+7600005 Física I 5 75 95 5.1 A
+7600009 Seminários de Física I 1 15 70 7.0 A
+7600011 Direcionamento Acadêmico I 2 30 83 8.3 A
+7600013 Laboratório de Física I 2 1 60 90 7.7 A
+SMA0353 Cálculo I 4 60 100 5.7 A
+SMA0374 Álgebra Linear e Geometria Analítica 5 1 105 100 7.6 A
+Créditos acumulados no Semestre19  2 Média ponderada com reprovações:   6.7
+_________________________________________________________________________________________
+2022  2º. Semestre
+7500012 Química Geral 2 30 100 6.5 A
+7500017 Química Geral Experimental 2 30 100 5.0 A
+7600006 Física II 5 75 97 5.6 A
+7600010 Seminários de Física II 1 15 100 10.0 A
+7600012 Direcionamento Acadêmico II 2 30 100 10.0 A
+7600014 Laboratório de Física II 2 1 60 100 7.1 A
+SMA0354 Cálculo II 4 60 100 8.1 A
+SME0332 Fundamentos da Programação de Computadores 4 2 120 100 10.0 A
+Créditos acumulados no Semestre22  3 Média ponderada com reprovações:   7.8
+_________________________________________________________________________________________
+2023  1º. Semestre
+7600007 Física III 3 1 75 100 7.8 A
+7600015 Laboratório de Física III 4 60 100 7.5 A
+7600016 Introdução à Física Matemática 3 1 75 100 8.1 A
+7600025 Vibrações e Ondas 2 1 60 100 7.2 A
+7600055 Programação Orientada a Objetos 3 1 75 91 8.8 A
+SMA0355 Cálculo III 4 60 100 8.3 A
+Créditos acumulados no Semestre19  4 Média ponderada com reprovações:   8.0
+_________________________________________________________________________________________
+2023  2º. Semestre
+7600008 Física IV 3 1 75 97 8.2 A
+7600017 Introdução à Física Computacional 3 1 75 100 8.7 A
+7600018 Mecânica Clássica 4 1 90 90 8.7 A
+7600120 Astronomia e Astrofísica 4 60 100 9.7 A
+SCC0122 Estruturas de Dados 4 1 90 100 7.9 A
+SMA0356 Cálculo IV 4 60 100 7.0 A
+Créditos acumulados no Semestre22  4 Média ponderada com reprovações:   8.4
+_________________________________________________________________________________________
+2024  1º. Semestre
+7600019 Física Moderna 4 60 30 90 9.2 A
+7600020 Física Matemática 3 1 75 100 9.0 A
+7600021 Eletromagnetismo 4 1 90 96 9.5 A
+7600056 Introdução aos Sistemas de Computação 3 1 75 90 6.3 A
+Créditos acumulados no Semestre14  3 Média ponderada com reprovações:   8.6
+_________________________________________________________________________________________
+2024  2º. Semestre
+7600022 Mecânica Quântica A 4 60 93 9.7 A
+7600023 Termodinâmica e Física Estatística 4 60 87 8.4 A
+ 
+Júpiter - Sistema de Gestão Acadêmica da Pró-Reitoria de Graduação
+HISTÓRICO ESCOLAR COMPLETO
+ Unidade: Instituto de Física de São Carlos
+ Aluno: 5255417/1 - Pedro Calligaris Delbem
+ Ingresso: Vestibular SISU LE 1 - 25/03/2022
+ Curso: 76041/0 - Bacharelado em Física Computacional
+ Quantidade de reingressos: 0
+___________________________________________________________________________________________
+ Emitido em 12/07/2025 19:25 - Página 2 de 
+4
+Creditos Atividade 
+Sigla Nome da Disciplina AU TR CH CE CP EXT ATPA FREQ NOTA
+7600028 Relatividade Restrita 3 1 75 100 7.3 A
+7600036 Eletromagnetismo Computacional 2 1 60 87 9.3 A
+Créditos acumulados no Semestre13  2 Média ponderada com reprovações:   8.6
+_________________________________________________________________________________________
+2025  1º. Anual
+7600039 Trabalho de Conclusão de Curso 4  MA
+_________________________________________________________________________________________
+2025  1º. Semestre
+7600030 Introdução à Relatividade Geral 4 60 100 7.5 A
+7600037 Mecânica Quântica B 4 60 97 7.7 A
+7600062 Sistemas Operacionais 3 1  MA
+7600065 Mecânica Quântica Computacional 2 1 60 93 8.0 A
+Créditos acumulados no Semestre10  1 Média ponderada com reprovações:   7.7
+Créditos pretendidos no Semestre3  1 
+_________________________________________________________________________________________
+2025  2º. Semestre
+7600024 Laboratório Avançado de Física I (8) (2) 60  IL
+PRG0012 Segurança em Laboratórios de Ensino e Pesquisa (2) (1)  IR
+PRG0042 Disciplina Paulista de Acessibilidade e Inclusão (5)  IR
+_________________________________________________________________________________________
+Créditos obtidos:  aula :119      trabalho :   19        total:    138 Média ponderada: 7.9
+Créditos matriculados:  aula :122      trabalho :   24        total:    146
+Carga Horária Total:2355 h
+Carga Horária em AAC: 180
+Carga horária total de EXT:30
+Total geral (Carga Horária Total + Estágio + Carga Horária em AAC + Carga horária total de EXT): 2565
+Média ponderada com reprovações:   7.9
+Créditos exigidos pelo curso: 150 Percentual de conclusão: 92.0 %
+Classificação na turma de ingresso: 6º de 45
+Os dados abaixo foram processados em : 04/07/2025
+Atenção: Valores para seleção das optativas : 8.3788
+Média normalizada : 6.0641
+Média ponderada de seu curso : 6.3740
+_________________________________________________________________________________________
+Totais de Créditos Acumulados por Tipo de Obrigatoriedade:
+Aula Trabalho
+Obrigatórias 82 12
+Opt.Eletivas 29 6
+Opt.Livres 8 1
+- As notas variarão de zero a dez, podendo ser aproximadas até a primeira casa decimal (Regimento Geral, artigo 83).
+- Será aprovado, com direito aos créditos correspondentes, o aluno que obtiver nota final igual ou superior a cinco e tenha, no mínimo, setenta por cento de
+freqüência na disciplina (Regimento Geral, artigo 84).
+- Um crédito aula corresponde a 15 horas de carga horária semestral, e o trabalho a trinta.
+- Este Histórico Escolar é completo, mostrando eventuais reprovações e/ou trancamentos de matrícula.
+ 
+Júpiter - Sistema de Gestão Acadêmica da Pró-Reitoria de Graduação
+HISTÓRICO ESCOLAR COMPLETO
+ Unidade: Instituto de Física de São Carlos
+ Aluno: 5255417/1 - Pedro Calligaris Delbem
+ Ingresso: Vestibular SISU LE 1 - 25/03/2022
+ Curso: 76041/0 - Bacharelado em Física Computacional
+ Quantidade de reingressos: 0
+___________________________________________________________________________________________
+ Emitido em 12/07/2025 19:25 - Página 3 de 
+4
+ 
+Registro das Atividades Acadêmicas Complementares  
+_________________________________________________________________________________________
+Legenda:
+AU = Crédito Aula TR = Crédito Trabalho CH = Carga Horária
+MA = Matriculado T  = Trancado CE = Carga Horária de Estágio
+A  = Aprovado RN = Reprovado por Nota AE = Aproveitamento de Estudo
+RA = Reprovado por Nota e Frequência DI = Dispensado RF = Reprovado por Frequência
+CP = Carga Horária práticas componentes curricularesDS = Dispensado por prova de suficiência (Res. CoG 4844/01)
+ATPA = Atividades Teórico-Práticas de Aprofundamento EXT = Carga Horária de Extensão
+I = Inscrito IR = Inscrição Reservada IT = Inscrição em Turma Lotada
+IP = Inscrição em optativa Preterida P  = Pendente IL = Inscrição em Lista de Espera
+Média Ponderada das disciplinas em que o aluno obteve aprovação (não inclui notas de AE e DS).
+Observações
+Curso reconhecido pela Portaria CEE/GP nº  298 de 23/06/2022, D.O.E.24/06/2022.
+_________________________________________________________________________________________
+Tipo de Atividade Área Descrição C.H.
+2024 1º Semestre
+Iniciação Científica Pesquisa
+Desenvolvimento de uma Biblioteca de Ferramentas
+Gráficas para  Medidas para o Subsistema de
+Prescrição Gráfica
+60
+2024 2º Semestre
+Iniciação Científica Pesquisa Redes Neurais Celulares implementada em um
+computador quântico - NISQ 120
+Total obtido 180
+Total exigido 120
+ 
+Júpiter - Sistema de Gestão Acadêmica da Pró-Reitoria de Graduação
+HISTÓRICO ESCOLAR COMPLETO
+ Unidade: Instituto de Física de São Carlos
+ Aluno: 5255417/1 - Pedro Calligaris Delbem
+ Ingresso: Vestibular SISU LE 1 - 25/03/2022
+ Curso: 76041/0 - Bacharelado em Física Computacional
+ Quantidade de reingressos: 0
+___________________________________________________________________________________________
+ Emitido em 12/07/2025 19:25 - Página 4 de 
+4
