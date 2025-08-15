@@ -1,0 +1,66 @@
+\documentclass[12pt, border=10pt]{standalone}
+
+% --- PACOTES NECESSÁRIOS ---
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{tikz-timetable} % O pacote principal para a grade de horários
+
+% --- DEFINIÇÃO DE CORES (Opcional) ---
+\definecolor{aulaSegunda}{RGB}{227, 235, 255} % Um azul claro
+\definecolor{aulaQuarta}{RGB}{255, 230, 230} % Um vermelho/rosa claro
+
+\begin{document}
+
+% --- 1. DEFINIÇÃO DA ESTRUTURA DA GRADE ---
+% Criamos um novo tipo de grade chamada 'meuHorario'
+\newtimetable{meuHorario}
+
+% Definimos as horas que aparecerão na coluna da esquerda.
+% 'start' é a primeira hora, 'end' é a última, 'step' é o intervalo.
+\sethours{start=8, end=23, step=1}
+
+% Definimos os dias da semana que serão as colunas.
+% O primeiro argumento é a largura da coluna.
+\setdays{4.5cm}{SEGUNDA, QUARTA}
+
+% --- 2. DESENHANDO A GRADE E ADICIONANDO AS AULAS ---
+\begin{timetable}[
+    % Opções de Estilo:
+    linecolor=gray!40,      % Cor das linhas da grade
+    headercolor=gray!20,    % Cor do cabeçalho
+    bodyfs=\bfseries\sffamily, % Fonte para o corpo (negrito, sans-serif)
+    headerfs=\Large\bfseries\sffamily % Fonte para o cabeçalho
+    ]
+
+    % --- Adicionando as aulas ---
+    % \event{dia}{hora_inicio}{hora_fim}{Nome da Aula}[cor]
+    
+    % Aula de Segunda-Feira
+    \event{1}{13:30}{17:10}{
+        \centering % Centraliza o texto dentro do bloco
+        7600024 - \\ 
+        Laboratório Avançado\\ 
+        de Física I
+    }[bgcolor=aulaSegunda]
+
+    % Aulas de Quarta-Feira
+    \event{2}{19:00}{20:40}{
+        \centering 
+        SME0828 - \\ 
+        Introdução à\\ 
+        Ciência de Dados
+    }[bgcolor=aulaQuarta]
+    
+    % Segunda aula da Segunda-Feira
+     \event{1}{21:00}{22:40}{
+        \centering 
+        SME0828 - \\ 
+        Introdução à\\ 
+        Ciência de Dados
+    }[bgcolor=aulaSegunda]
+
+\end{timetable}
+
+\end{document}
