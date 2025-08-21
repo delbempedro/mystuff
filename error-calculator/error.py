@@ -371,3 +371,17 @@ def sqrt(curentmeasure):
         measure: A new `measure` object with the square root of the value and the error divided by twice the square root of the value.
     """
     return measure(math.sqrt(curentmeasure._value), curentmeasure._error/(2.0*math.sqrt(curentmeasure._value)))
+
+def sin(curentmeasure):
+    """
+    Calculates the sine of a `curentmeasure` object.
+    
+        Args:
+        curentmeasure (measure): The `curentmeasure` object to calculate the sine of.
+
+    Returns:
+        measure: A new `measure` object with the sine of the value and the error times the cosine of the value.
+    """
+    value = math.sin(curentmeasure._value)
+    error = abs(math.cos(curentmeasure._value)) * curentmeasure._error
+    return measure(value, error)
