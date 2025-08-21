@@ -1,4 +1,5 @@
 import math
+import numbers
 
 class measure:
 
@@ -22,7 +23,7 @@ class measure:
         Adds two `measure` objects together or adds a `measure` object and a `float` or `int`.
 
         Args:
-            other (measure or float or int): The object to be added to `self`.
+            other (measure or numbers.Number): The object to be added to `self`.
 
         Returns:
             measure: A new `measure` object with the sum of the values and the sum of the errors.
@@ -34,13 +35,13 @@ class measure:
 
             return measure(self._value+other._value, self._error+other._error)
         
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
 
             return measure(self._value+other, self._error)
         
         else:
 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
                             
         
     def __radd__(self, other):
@@ -48,7 +49,7 @@ class measure:
         Adds a `measure` object and a `float` or `int` together or adds two `measure` objects together.
         
         Args:
-            other (measure or float or int): The object to be added to `self`.
+            other (measure or numbers.Number): The object to be added to `self`.
         
         Returns:
             measure: A new `measure` object with the sum of the values and the sum of the errors.
@@ -60,13 +61,13 @@ class measure:
 
             return measure(self._value+other._value, self._error+other._error)
         
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
 
             return measure(self._value+other, self._error)
         
         else:
 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
 
         
     def __sub__(self, other):
@@ -74,7 +75,7 @@ class measure:
         Subtracts two `measure` objects or a `measure` object and a `float` or `int` together.
 
         Parameters:
-            other (measure or float or int): The object to be subtracted from `self`.
+            other (measure or numbers.Number): The object to be subtracted from `self`.
 
         Returns:
             measure: A new `measure` object with the difference of the values and the sum of the errors.
@@ -86,13 +87,13 @@ class measure:
 
             return measure(self._value-other._value, self._error+other._error)
         
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
 
             return measure(self._value-other, self._error)
         
         else:
 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
         
         
     def __rsub__(self, other):
@@ -100,7 +101,7 @@ class measure:
         Subtracts two `measure` objects or a `measure` object and a `float` or `int` together.
 
         Parameters:
-            other (measure or float or int): The object to be subtracted from `self`.
+            other (measure or numbers.Number): The object to be subtracted from `self`.
 
         Returns:
             measure: A new `measure` object with the difference of the values and the sum of the errors.
@@ -112,13 +113,13 @@ class measure:
 
             return measure(other._value-self._value, self._error+other._error)
         
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
 
             return measure(other-self._value, self._error)
         
         else:
 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
             
     
     def __mul__(self, other):
@@ -126,7 +127,7 @@ class measure:
         Multiplies the current `measure` object with another `measure` object, a `float` or `int`, or a combination thereof.
 
         Parameters:
-            other (measure or float or int): The object to be multiplied with the current `measure` object.
+            other (measure or numbers.Number): The object to be multiplied with the current `measure` object.
 
         Returns:
             measure: A new `measure` object with the product of the values and the sum of the products of the errors by the conjugate values.
@@ -138,13 +139,13 @@ class measure:
 
             return measure(self._value*other._value, self._value*other._error+self._error+other._value)
         
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
                 
             return measure(self._value*other, self._error*other)
         
         else:
 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
             
         
     def __rmul__(self, other):
@@ -152,7 +153,7 @@ class measure:
         Multiplies the current `measure` object with another `measure` object, a `float` or `int`, or a combination thereof.
 
         Parameters:
-            other (measure or float or int): The object to be multiplied with the current `measure` object.
+            other (measure or numbers.Number): The object to be multiplied with the current `measure` object.
 
         Returns:
             measure: A new `measure` object with the product of the values and the sum of the products of the errors by the conjugate values.
@@ -164,13 +165,13 @@ class measure:
             
             return measure(self._value*other._value, self._value*other._error+self._error+other._value)
 
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
                 
             return measure(self._value*other, self._error*other)
 
         else:
                 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
 
         
     def __truediv__(self, other):
@@ -178,7 +179,7 @@ class measure:
         Divides the current `measure` object by another `measure` object, a `float` or `int`, or a combination thereof.
 
         Parameters:
-            other (measure or float or int): The object to divide the current `measure` object by.
+            other (measure or numbers.Number): The object to divide the current `measure` object by.
 
         Returns:
             measure: A new `measure` object with the quotient of the values and subract of the products of the errors by the conjugate values dividing by the square of the divider.
@@ -192,13 +193,13 @@ class measure:
             divider = other._value*other._value
             return measure(self._value/other._value, dividend/divider)
 
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
                 
                 return measure(self._value/other, self._error/other)
         
         else:
                 
-                raise TypeError("Should be measure, float or int")
+                raise TypeError("Should be measure, numbers.Number")
                 
             
     def __rtruediv__(self, other):
@@ -206,7 +207,7 @@ class measure:
         Divides the current `measure` object by another `measure` object, a `float` or `int`, or a combination thereof.
 
         Parameters:
-            other (measure or float or int): The object to divide the current `measure` object by.
+            other (measure or numbers.Number): The object to divide the current `measure` object by.
 
         Returns:
             measure: A new `measure` object with the quotient of the values and subract of the products of the errors by the conjugate values dividing by the square of the divider.
@@ -220,13 +221,13 @@ class measure:
             divisor = self._value*self._value
             return measure(other._value/self._value, dividend/divisor)
         
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
                 
             return measure(self._value/other, -other*self._error/self._value**2.0)
         
         else:
                
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
 
         
     def __repr__(self):
@@ -278,7 +279,7 @@ class measure:
         Calculates the exponentiation of the current `measure` object with another `measure` object, a `float` or `int`, or a combination thereof.
 
         Parameters:
-            other (measure or float or int): The object to be exponentiated with the current `measure` object.
+            other (measure or numbers.Number): The object to be exponentiated with the current `measure` object.
 
         Returns:
             measure: A new `measure` object with the exponentiation of the values
@@ -293,13 +294,13 @@ class measure:
             multiplier = other._error*(math.log(self._value)) + other._value*self._error/self._value
             return measure(self._value**other._value, exponential*multiplier)
         
-        elif isinstance(other, float or int):
+        elif isinstance(other, numbers.Number):
 
             return measure(self._value**other, other*self._value**(other-1)*self._error)
         
         else:
 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
 
        
 #out-of-class methods
@@ -332,8 +333,8 @@ def log(logarithim, base):
         Calculates the logarithm of a `measure` object with respect to a base `measure` object or a base `float` or `int`.
 
         Parameters:
-            logarithim (measure or float or int): The `measure` object or `float` or `int` to calculate the logarithm of.
-            base (measure or float or int): The `measure` object or `float` or `int` to use as the base for the logarithm calculation.
+            logarithim (measure or numbers.Number): The `measure` object or `float` or `int` to calculate the logarithm of.
+            base (measure or numbers.Number): The `measure` object or `float` or `int` to use as the base for the logarithm calculation.
 
         Returns:
             measure: A new `measure` object with the logarithm of the value
@@ -348,17 +349,17 @@ def log(logarithim, base):
             divisor = 2.0*math.log(base._value)
             return measure(logarithim._value**base._value, dividendo/divisor)
         
-        elif isinstance(base, float or int):#if only logarithm is a measure
+        elif isinstance(base, numbers.Number):#if only logarithm is a measure
 
             return ln(logarithim)/math.log(base)
         
-        elif isinstance(logarithim, float or int):#if only base is a measure
+        elif isinstance(logarithim, numbers.Number):#if only base is a measure
 
             return math.log(logarithim)/ln(base)
         
         else:#if none are a measure
 
-            raise TypeError("Should be measure, float or int")
+            raise TypeError("Should be measure, numbers.Number")
         
 def sqrt(curentmeasure):
     """
