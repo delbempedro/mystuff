@@ -137,7 +137,7 @@ class measure:
         """
         if isinstance(other, measure):
 
-            return measure(self._value*other._value, self._value*other._error+self._error+other._value)
+            return measure(self._value*other._value, self._value*other._error+self._error*other._value)
         
         elif isinstance(other, numbers.Number):
                 
@@ -163,7 +163,7 @@ class measure:
         """
         if isinstance(other, measure):
             
-            return measure(self._value*other._value, self._value*other._error+self._error+other._value)
+            return measure(self._value*other._value, self._value*other._error+self._error*other._value)
 
         elif isinstance(other, numbers.Number):
                 
@@ -189,7 +189,7 @@ class measure:
         """
         if isinstance(other, measure):
 
-            dividend = self._value*other._error-self._error+other._value
+            dividend = self._value*other._error-self._error*other._value
             divider = other._value*other._value
             return measure(self._value/other._value, dividend/divider)
 
@@ -223,7 +223,7 @@ class measure:
         
         elif isinstance(other, numbers.Number):
                 
-            return measure(self._value/other, -other*self._error/self._value**2.0)
+            return measure(other/self._value, -other*self._error/self._value**2.0)
         
         else:
                
